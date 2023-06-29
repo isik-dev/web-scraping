@@ -25,7 +25,7 @@ valuestm1 = time.perf_counter()
 values = []
 options = soup.select('option')
 for option in options:
-    if option['value'] != 'none':
+    if option['value'] != 'none' and 'racquetB' not in option['value']:
         values.append(option['value'])
 valuestm2 = time.perf_counter()
 print(f'Total time to extract values: {valuestm2-valuestm1:0.2f} seconds')
